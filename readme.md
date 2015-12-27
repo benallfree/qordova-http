@@ -1,4 +1,4 @@
-# quordova-http
+# qordova-http
 
 A [Q](https://github.com/kriskowal/q)-enabled HTTP for Cordova. Easier to use than [cordova-plugin-file-transfer](https://github.com/apache/cordova-plugin-file-transfer).
 

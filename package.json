@@ -4,7 +4,7 @@
   "description": "Q-enabled HTTP interface for Cordova",
   "main": "./build/http",
   "scripts": {
-    "build": "browserify -t coffeeify --extension='.coffee' src/http.coffee -o build/http.js"
+    "build": "./node_modules/.bin/coffee -c -o ./build src/http.coffee"
   },
   "author": "Ben Allfree",
   "license": "MIT",

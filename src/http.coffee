@@ -13,3 +13,5 @@ class Http
       deferred.reject(err)
     ))
     deferred.promise
+    
+module.exports = Http
