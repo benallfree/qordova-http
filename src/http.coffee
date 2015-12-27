@@ -1,5 +1,8 @@
 Q = require('q')
 
+class HttpError
+  constructor: (@url, @dstFname, @errorInfo)->
+
 class Http
   @download: (url, dst_fname)->
     deferred = Q.defer()
@@ -10,8 +13,10 @@ class Http
       deferred.resolve()
     ), ((err)->
       console.log("Could not download file", err)
-      deferred.reject(err)
+      deferred.reject(new HttpError(url, dst_fname, err))
     ))
     deferred.promise
     
-module.exports = Http
+module.exports =
+  Http: Http
+  HttpError: HttpError

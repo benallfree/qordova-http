@@ -2,6 +2,7 @@
   "name": "qordova-http",
   "version": "1.0.0",
   "description": "Q-enabled HTTP interface for Cordova",
+  "repository": "benallfree/qordova-http",
   "main": "./build/http",
   "scripts": {
     "build": "./node_modules/.bin/coffee -c -o ./build src/http.coffee"

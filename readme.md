@@ -15,11 +15,14 @@ A [Q](https://github.com/kriskowal/q)-enabled HTTP for Cordova. Easier to use th
 Download a file to a destination file name.
 
 ```
-Http.download(url, dst\_fname)
-.then(function() {
-  console.log('file downloaded');
-})
-.fail(function() {
-  console.log('file could not be downloaded');
+// Note that we must wrap inside `deviceready` because it uses Cordova features.
+document.addEventListener("deviceready", (function() {
+  Http.download(url, dst\_fname)
+  .then(function() {
+    console.log('file downloaded');
+  })
+  .fail(function(HttpError) {
+    console.log('file could not be downloaded');
+  });
 });
 ```
