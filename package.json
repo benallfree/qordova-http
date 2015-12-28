@@ -1,6 +1,6 @@
 {
   "name": "qordova-http",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Q-enabled HTTP interface for Cordova",
   "repository": "benallfree/qordova-http",
   "main": "./build/http",
